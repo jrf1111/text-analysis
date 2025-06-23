@@ -168,7 +168,7 @@ preprocess_text = function(x, remove_stopwords = T, remove_suffixes = T,
 			
 			
 			#for all the words with the suffix... 
-			for(a in 1:length(strings)){
+			for(a in seq_along(strings)){
 				word = strings[a]
 				#see if there is a version of the word without the suffix...
 				root = gsub(paste0("([[:alpha:]]*?)", suf, "$"), "\\1", word)
